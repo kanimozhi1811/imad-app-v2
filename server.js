@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 
 var articles={
-'article-One':{
-    title:'article-one',
+'article-one':{
+    title:'Article-one',
     heading:'Article one',
     date:'feb 26,2017',
     content:`<p>
@@ -18,8 +18,8 @@ var articles={
                     This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
                 </p> `
 },
-'article-Two':{  
-    title:'article-two',
+'article-two':{  
+    title:'Article-two',
     heading:'Article two',
     date:'feb 27,2017',
     content:`<p>
@@ -27,9 +27,10 @@ var articles={
                 </p>
                 <p>
                     This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p> `},
-'article-Three':{
-      title:'article-three',
+                </p> `
+},
+'article-three':{
+      title:'Article-three',
     heading:'Article three',
     date:'feb 28,2017',
     content:`<p>
