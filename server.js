@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone={
+var articles={
+'article-one':{
     title:'article-one',
     heading:'Article one',
     date:'feb 26,2017',
@@ -16,7 +17,30 @@ var articleone={
                 <p>
                     This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
                 </p> `
+},
+'article-two':{  
+    title:'article-two',
+    heading:'Article two',
+    date:'feb 27,2017',
+    content:`<p>
+                    This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the first artcle that you are looking for.
+                </p>
+                <p>
+                    This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
+                </p> `},
+'article-three':{
+      title:'article-three',
+    heading:'Article three',
+    date:'feb 28,2017',
+    content:`<p>
+                    This is the content of the third artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
+                </p>
+                <p>
+                    This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
+                </p> `
+}
 };
+
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
@@ -60,9 +84,10 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res)
+app.get('/:articlename',function(req,res)
 {
-    res.send(createTemplate(articleone));
+    var articlename=req.params.artivlename;
+    res.send(createTemplate(articles[articlename]));
 });
 app.get('/article-two',function(req,res)
 {
