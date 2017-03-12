@@ -14,42 +14,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
-'article-one':{
-    title:'Article-one',
-    heading:'Article one',
-    date:'feb 26,2017',
-    content:`<p>
-                    This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p>
-                <p>
-                    This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p> `
-},
-'article-two':{  
-    title:'Article-two',
-    heading:'Article two',
-    date:'feb 27,2017',
-    content:`<p>
-                    This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p>
-                <p>
-                    This is the content of the second artcle that you are looking for.This is the content of the second artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p> `
-},
-'article-three':{
-      title:'Article-three',
-    heading:'Article three',
-    date:'feb 28,2017',
-    content:`<p>
-                    This is the content of the third artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p>
-                <p>
-                    This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.This is the content of the first artcle that you are looking for.
-                </p> `
-}
-};
-
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
